@@ -4,6 +4,7 @@ import { ExternalLink, Sparkles, CheckCircle2, Camera, ListTodo, Brain } from "l
 import mathgenieImage from "@/assets/mathgenie-showcase.jpg";
 import worksnapImage from "@/assets/worksnap-showcase.jpg";
 import snapanimalImage from "@/assets/snapanimal-showcase.jpg";
+import placeholderImage from "/placeholder.svg";
 const Projects = () => {
   const projects = [{
     title: "MathGenie AI",
@@ -17,7 +18,8 @@ const Projects = () => {
     description: "AI productivity SaaS for task management, smart scheduling, and workflow optimization",
     tech: ["React", "Next.js", "AI/ML"],
     icon: Brain,
-    link: "https://taskmaateai.netlify.app/"
+    link: "https://taskmaateai.netlify.app/",
+    image: placeholderImage
   }, {
     title: "Work Snap",
     description: "Productivity app with offline-first task management and real-time sync",
@@ -37,7 +39,8 @@ const Projects = () => {
     description: "Clean, high-performance landing page to drive user sign-ups and premium subscriptions",
     tech: ["React", "Next.js", "Tailwind CSS"],
     icon: ListTodo,
-    link: "https://snapanimalai.netlify.app/"
+    link: "https://snapanimalai.netlify.app/",
+    image: placeholderImage
   }];
   const featuredProject = projects.find(p => p.featured);
   const otherProjects = projects.filter(p => !p.featured);
