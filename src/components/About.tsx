@@ -28,9 +28,8 @@ const About = () => {
             About Me
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Software Engineer with 3+ years of experience in mobile and web development using Flutter, React, Next.js, and Node.js. 
-            Skilled in building scalable apps, integrating APIs, and ensuring accessibility compliance (WCAG 2.0, ADA). 
-            Passionate about creating high-performing, user-friendly digital products that drive impact.
+            I'm a Software Engineer focused on helping companies build high-quality, scalable apps that delight users and drive business results. 
+            With expertise in Flutter, React, and Next.js, I turn ideas into fast, reliable, and user-friendly digital products.
           </p>
         </div>
 
