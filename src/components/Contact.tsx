@@ -57,7 +57,7 @@ const Contact = () => {
                   <span>(309) 909-3177</span>
                 </a>
                 <a 
-                  href="https://www.linkedin.com/in/jean-kpoti"
+                  href="https://www.linkedin.com/in/jean-kpoti-3a0137143/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 p-3 rounded-lg hover:bg-secondary transition-colors group"
