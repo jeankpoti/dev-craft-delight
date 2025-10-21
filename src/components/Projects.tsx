@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink, Sparkles, CheckCircle2, Camera, ListTodo, Brain } from "lucide-react";
 import mathgenieImage from "@/assets/mathgenie-showcase.jpg";
 import worksnapImage from "@/assets/worksnap-showcase.jpg";
+import snapanimalImage from "@/assets/snapanimal-showcase.jpg";
 const Projects = () => {
   const projects = [{
     title: "MathGenie AI",
@@ -29,7 +30,8 @@ const Projects = () => {
     description: "Wildlife education app identifying animals with facts and interactive quizzes",
     tech: ["Flutter", "AI Recognition", "Firebase"],
     icon: Camera,
-    link: "https://apps.apple.com/us/app/snap-animal-ai/id6745976176"
+    link: "https://apps.apple.com/us/app/snap-animal-ai/id6745976176",
+    image: snapanimalImage
   }, {
     title: "Snap Animal Landing",
     description: "Clean, high-performance landing page to drive user sign-ups and premium subscriptions",
