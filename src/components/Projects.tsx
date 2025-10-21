@@ -9,7 +9,7 @@ const Projects = () => {
       description: "AI-powered learning app solving math from photos with quizzes & study plans",
       tech: ["Flutter", "Gemini AI", "Firebase"],
       icon: Sparkles,
-      link: "#",
+      link: "https://apps.apple.com/us/app/mathgenie-ai-solve-homework/id6746733499",
       featured: true
     },
     {
@@ -17,28 +17,28 @@ const Projects = () => {
       description: "AI productivity SaaS for task management, smart scheduling, and workflow optimization",
       tech: ["React", "Next.js", "AI/ML"],
       icon: Brain,
-      link: "#"
+      link: "https://taskmaateai.netlify.app/"
     },
     {
       title: "Work Snap",
       description: "Productivity app with offline-first task management and real-time sync",
       tech: ["Flutter", "Supabase", "Offline-First"],
       icon: CheckCircle2,
-      link: "#"
+      link: "https://apps.apple.com/us/app/work-snap/id6739957932"
     },
     {
       title: "Snap Animal AI",
       description: "Wildlife education app identifying animals with facts and interactive quizzes",
       tech: ["Flutter", "AI Recognition", "Firebase"],
       icon: Camera,
-      link: "#"
+      link: "https://apps.apple.com/us/app/snap-animal-ai/id6745976176"
     },
     {
       title: "Snap Animal Landing",
       description: "Clean, high-performance landing page to drive user sign-ups and premium subscriptions",
       tech: ["React", "Next.js", "Tailwind CSS"],
       icon: ListTodo,
-      link: "#"
+      link: "https://snapanimalai.netlify.app/"
     }
   ];
 
@@ -88,10 +88,12 @@ const Projects = () => {
                 </div>
 
                 <div>
-                  <Button variant="hero" className="group">
-                    View Demo
-                    <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                  </Button>
+                  <a href={featuredProject.link} target="_blank" rel="noopener noreferrer">
+                    <Button variant="hero" className="group">
+                      View Demo
+                      <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                    </Button>
+                  </a>
                 </div>
               </div>
 
@@ -134,10 +136,12 @@ const Projects = () => {
                 ))}
               </div>
 
-              <Button variant="outline" size="sm" className="group/btn">
-                View Project
-                <ExternalLink className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
-              </Button>
+              <a href={project.link} target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" size="sm" className="group/btn">
+                  View Project
+                  <ExternalLink className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+                </Button>
+              </a>
             </Card>
           ))}
         </div>
