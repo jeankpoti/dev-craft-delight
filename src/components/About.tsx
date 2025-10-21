@@ -28,9 +28,9 @@ const About = () => {
             About Me
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            I'm a Software Engineer focused on helping companies build high-quality, scalable apps 
-            that delight users and drive business results. With expertise in Flutter, React, and Next.js, 
-            I turn ideas into fast, reliable, and user-friendly digital products.
+            Software Engineer with 3+ years of experience in mobile and web development using Flutter, React, Next.js, and Node.js. 
+            Skilled in building scalable apps, integrating APIs, and ensuring accessibility compliance (WCAG 2.0, ADA). 
+            Passionate about creating high-performing, user-friendly digital products that drive impact.
           </p>
         </div>
 
@@ -53,12 +53,25 @@ const About = () => {
         <Card className="p-8 md:p-12 bg-gradient-card backdrop-blur-sm border-border shadow-card animate-fade-in-slow">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <h3 className="text-2xl font-bold mb-4">3+ Years of Experience</h3>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                Developing mobile and web apps with a focus on API integrations, performance tuning, 
-                and responsive design. My goal is to help teams ship products faster, reduce bugs, 
-                and create a better experience for their users.
-              </p>
+              <h3 className="text-2xl font-bold mb-4">Professional Experience</h3>
+              <div className="space-y-4 mb-6">
+                <div>
+                  <p className="font-semibold text-primary">Freelance Software Developer</p>
+                  <p className="text-sm text-muted-foreground mb-2">Jun 2023 – May 2025</p>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    Built and launched apps reaching 10,000+ downloads. Delivered custom mobile and web applications 
+                    with responsive design and accessibility compliance.
+                  </p>
+                </div>
+                <div>
+                  <p className="font-semibold text-accent">S2A TECHNOLOGY</p>
+                  <p className="text-sm text-muted-foreground mb-2">May 2022 - May 2023</p>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    Developed responsive apps with WCAG 2.0/ADA compliance. Reduced post-release issues by 30% 
+                    through improved testing and deployment processes.
+                  </p>
+                </div>
+              </div>
             </div>
             <div className="space-y-4">
               <div className="flex items-center gap-3">

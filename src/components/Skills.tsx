@@ -3,16 +3,28 @@ import { Card } from "@/components/ui/card";
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Frontend Development",
-      skills: ["React", "Next.js", "Flutter", "TypeScript", "Tailwind CSS", "Responsive Design"]
+      title: "Languages",
+      skills: ["JavaScript", "TypeScript", "Dart", "Python", "Java", "C#"]
     },
     {
-      title: "Backend & APIs",
-      skills: ["REST APIs", "API Integration", "Node.js", "Database Design", "Authentication"]
+      title: "Frontend & Mobile",
+      skills: ["React", "Next.js", "Flutter", "HTML5", "CSS3", "Tailwind CSS", "Responsive Design"]
     },
     {
-      title: "Tools & Practices",
-      skills: ["Git", "Performance Optimization", "UI/UX Design", "Cross-Platform Development", "Testing"]
+      title: "Backend & Cloud",
+      skills: ["Node.js", "REST APIs", "Firebase", "Supabase", "Firestore", "RevenueCat"]
+    },
+    {
+      title: "State Management",
+      skills: ["Bloc", "Provider", "Riverpod", "Redux"]
+    },
+    {
+      title: "Tools & DevOps",
+      skills: ["Git", "GitHub", "VS Code", "Cursor", "WordPress", "Lovable", "Bolt", "Replit"]
+    },
+    {
+      title: "Accessibility & Testing",
+      skills: ["WCAG 2.0", "ADA Compliance", "Testing", "Debugging", "Performance Optimization"]
     }
   ];
 
@@ -28,7 +40,7 @@ const Skills = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((category, index) => (
             <Card 
               key={index}

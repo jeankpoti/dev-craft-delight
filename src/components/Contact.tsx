@@ -43,14 +43,21 @@ const Contact = () => {
               <h3 className="text-2xl font-bold mb-4">Get In Touch</h3>
               <div className="space-y-3">
                 <a 
-                  href="mailto:contact@example.com"
+                  href="mailto:jeankpoti385@gmail.com"
                   className="flex items-center gap-3 p-3 rounded-lg hover:bg-secondary transition-colors group"
                 >
                   <Mail className="h-5 w-5 text-primary group-hover:scale-110 transition-transform" />
-                  <span>contact@example.com</span>
+                  <span className="text-sm md:text-base">jeankpoti385@gmail.com</span>
                 </a>
                 <a 
-                  href="https://linkedin.com"
+                  href="tel:+13099093177"
+                  className="flex items-center gap-3 p-3 rounded-lg hover:bg-secondary transition-colors group"
+                >
+                  <span className="h-5 w-5 text-primary text-lg">📞</span>
+                  <span>(309) 909-3177</span>
+                </a>
+                <a 
+                  href="https://www.linkedin.com/in/jean-kpoti"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 p-3 rounded-lg hover:bg-secondary transition-colors group"
@@ -59,7 +66,7 @@ const Contact = () => {
                   <span>Connect on LinkedIn</span>
                 </a>
                 <a 
-                  href="https://github.com"
+                  href="https://github.com/jeankpoti"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 p-3 rounded-lg hover:bg-secondary transition-colors group"

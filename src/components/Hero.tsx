@@ -15,15 +15,15 @@ const Hero = () => {
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent animate-fade-in-slow">
-            Building Digital Products That Matter
+            Jean Kpoti
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in-slow" style={{ animationDelay: '0.2s' }}>
-            Software Engineer specializing in{" "}
+            Software Engineer with 3+ years of experience building scalable mobile and web apps using{" "}
             <span className="text-primary font-semibold">Flutter</span>,{" "}
             <span className="text-accent font-semibold">React</span>, and{" "}
-            <span className="text-primary font-semibold">Next.js</span>
-            {" "}— turning ideas into fast, scalable, and user-friendly applications.
+            <span className="text-primary font-semibold">Next.js</span>.
+            Passionate about creating high-performing, user-friendly digital products that drive impact.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 animate-fade-in-slow" style={{ animationDelay: '0.4s' }}>
@@ -38,24 +38,27 @@ const Hero = () => {
           
           <div className="flex gap-6 justify-center animate-fade-in-slow" style={{ animationDelay: '0.6s' }}>
             <a 
-              href="https://github.com" 
+              href="https://github.com/jeankpoti" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
+              aria-label="GitHub Profile"
             >
               <Github className="h-6 w-6" />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/in/jean-kpoti" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
+              aria-label="LinkedIn Profile"
             >
               <Linkedin className="h-6 w-6" />
             </a>
             <a 
-              href="mailto:contact@example.com"
+              href="mailto:jeankpoti385@gmail.com"
               className="text-muted-foreground hover:text-primary transition-colors"
+              aria-label="Email Contact"
             >
               <Mail className="h-6 w-6" />
             </a>
