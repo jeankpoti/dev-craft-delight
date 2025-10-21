@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Sparkles, CheckCircle2, Camera, ListTodo, Brain } from "lucide-react";
+import mathgenieImage from "@/assets/mathgenie-showcase.jpg";
 
 const Projects = () => {
   const projects = [
@@ -97,14 +98,12 @@ const Projects = () => {
                 </div>
               </div>
 
-              <div className="relative bg-secondary/50 min-h-[400px] flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="w-24 h-24 mx-auto mb-6 rounded-2xl bg-gradient-primary flex items-center justify-center shadow-glow">
-                    <featuredProject.icon className="h-12 w-12 text-foreground" />
-                  </div>
-                  <p className="text-2xl font-bold mb-2">AI-Powered Learning</p>
-                  <p className="text-muted-foreground">Flutter + Gemini AI</p>
-                </div>
+              <div className="relative bg-secondary/50 min-h-[400px] overflow-hidden">
+                <img 
+                  src={mathgenieImage}
+                  alt="MathGenie AI app interface showing AI-powered learning features"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </Card>
