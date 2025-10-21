@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Sparkles, CheckCircle2, Camera, ListTodo, Brain } from "lucide-react";
 import mathgenieImage from "@/assets/mathgenie-showcase.jpg";
+import worksnapImage from "@/assets/worksnap-showcase.jpg";
 
 const Projects = () => {
   const projects = [
@@ -25,7 +26,8 @@ const Projects = () => {
       description: "Productivity app with offline-first task management and real-time sync",
       tech: ["Flutter", "Supabase", "Offline-First"],
       icon: CheckCircle2,
-      link: "https://apps.apple.com/us/app/work-snap/id6739957932"
+      link: "https://apps.apple.com/us/app/work-snap/id6739957932",
+      image: worksnapImage
     },
     {
       title: "Snap Animal AI",
@@ -114,33 +116,45 @@ const Projects = () => {
           {otherProjects.map((project, index) => (
             <Card 
               key={index}
-              className="p-8 bg-gradient-card backdrop-blur-sm border-border hover:shadow-glow transition-all duration-300 hover:scale-105 animate-fade-in group"
+              className="overflow-hidden bg-gradient-card backdrop-blur-sm border-border hover:shadow-glow transition-all duration-300 hover:scale-105 animate-fade-in group"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="mb-4 inline-flex items-center justify-center w-14 h-14 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                <project.icon className="h-7 w-7 text-primary" />
-              </div>
+              {project.image && (
+                <div className="relative h-48 bg-secondary/50 overflow-hidden">
+                  <img 
+                    src={project.image}
+                    alt={`${project.title} app interface showcase`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              )}
               
-              <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
-              <p className="text-muted-foreground mb-6 leading-relaxed">{project.description}</p>
-              
-              <div className="flex flex-wrap gap-2 mb-6">
-                {project.tech.map((tech, techIndex) => (
-                  <span 
-                    key={techIndex}
-                    className="px-3 py-1 rounded-md bg-secondary text-sm"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
+              <div className="p-8">
+                <div className="mb-4 inline-flex items-center justify-center w-14 h-14 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                  <project.icon className="h-7 w-7 text-primary" />
+                </div>
+                
+                <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
+                <p className="text-muted-foreground mb-6 leading-relaxed">{project.description}</p>
+                
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {project.tech.map((tech, techIndex) => (
+                    <span 
+                      key={techIndex}
+                      className="px-3 py-1 rounded-md bg-secondary text-sm"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
 
-              <a href={project.link} target="_blank" rel="noopener noreferrer">
-                <Button variant="outline" size="sm" className="group/btn">
-                  View Project
-                  <ExternalLink className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
-                </Button>
-              </a>
+                <a href={project.link} target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" size="sm" className="group/btn">
+                    View Project
+                    <ExternalLink className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+                  </Button>
+                </a>
+              </div>
             </Card>
           ))}
         </div>
