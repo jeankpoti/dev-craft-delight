@@ -95,7 +95,7 @@ const Projects = () => {
           {otherProjects.map((project, index) => <Card key={index} className="overflow-hidden bg-gradient-card backdrop-blur-sm border-border hover:shadow-glow transition-all duration-300 hover:scale-105 animate-fade-in group" style={{
           animationDelay: `${index * 0.1}s`
         }}>
-              {project.image && <div className="relative h-48 bg-secondary/50 overflow-hidden">
+              {project.image && <div className="relative h-64 bg-secondary/50 overflow-hidden">
                   <img src={project.image} alt={`${project.title} app interface showcase`} className="w-full h-full object-cover" />
                 </div>}
               
