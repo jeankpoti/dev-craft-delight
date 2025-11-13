@@ -44,7 +44,7 @@ const Projects = () => {
   }];
   const featuredProject = projects.find(p => p.featured);
   const otherProjects = projects.filter(p => !p.featured);
-  return <section className="py-24 px-6 bg-background">
+  return <section id="projects" className="py-24 px-6 bg-background">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">

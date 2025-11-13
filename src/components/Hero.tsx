@@ -27,13 +27,21 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 animate-fade-in-slow" style={{ animationDelay: '0.4s' }}>
-            <Button size="lg" variant="hero" className="group">
-              View My Work
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button size="lg" variant="outline">
-              Get In Touch
-            </Button>
+            <a href="#projects">
+              <Button size="lg" variant="hero" className="group">
+                View My Work
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </a>
+            <a 
+              href="https://calendly.com/jkstudio385/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button size="lg" variant="outline">
+                Get In Touch
+              </Button>
+            </a>
           </div>
           
           <div className="flex gap-6 justify-center animate-fade-in-slow" style={{ animationDelay: '0.6s' }}>

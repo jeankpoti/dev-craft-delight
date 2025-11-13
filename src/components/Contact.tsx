@@ -79,10 +79,16 @@ const Contact = () => {
           </div>
 
           <div className="text-center pt-8 border-t border-border">
-            <Button size="lg" variant="hero" className="group">
-              <Calendar className="mr-2 h-5 w-5" />
-              Schedule a Call
-            </Button>
+            <a 
+              href="https://calendly.com/jkstudio385/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button size="lg" variant="hero" className="group">
+                <Calendar className="mr-2 h-5 w-5" />
+                Schedule a Call
+              </Button>
+            </a>
           </div>
         </Card>
       </div>
