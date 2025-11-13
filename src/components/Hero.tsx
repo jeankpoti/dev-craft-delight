@@ -33,11 +33,7 @@ const Hero = () => {
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </a>
-            <a 
-              href="https://calendly.com/jkstudio385/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="#contact">
               <Button size="lg" variant="outline">
                 Get In Touch
               </Button>

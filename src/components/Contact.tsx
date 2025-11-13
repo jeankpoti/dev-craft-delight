@@ -4,7 +4,7 @@ import { Mail, Linkedin, Github, Calendar } from "lucide-react";
 
 const Contact = () => {
   return (
-    <section className="py-24 px-6 bg-gradient-hero relative overflow-hidden">
+    <section id="contact" className="py-24 px-6 bg-gradient-hero relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5" />
       
       <div className="container mx-auto max-w-4xl relative z-10">
