@@ -66,18 +66,20 @@ const About = () => {
                 <div>
                   <p className="font-semibold text-primary">Freelance Software Developer</p>
                   <p className="text-sm text-muted-foreground mb-2">Jun 2023 – May 2025</p>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    Built and launched apps reaching 10,000+ downloads. Delivered custom mobile and web applications 
-                    with responsive design and accessibility compliance.
-                  </p>
+                  <ul className="text-muted-foreground text-sm leading-relaxed list-disc list-inside space-y-1">
+                    <li>Built and launched a job-matching platform reaching 10,000+ downloads on Google Play, directly improving client acquisition for partnered recruiters.</li>
+                    <li>Designed, built, and shipped multiple self-initiated mobile applications across productivity and education verticals, each with responsive design and WCAG 2.0 compliance.</li>
+                    <li>Optimized client codebases, reducing average page load times by ~40% and decreasing crash rates through systematic refactoring.</li>
+                  </ul>
                 </div>
                 <div>
                   <p className="font-semibold text-accent">S2A TECHNOLOGY</p>
                   <p className="text-sm text-muted-foreground mb-2">May 2022 - May 2023</p>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    Developed responsive apps with WCAG 2.0/ADA compliance. Reduced post-release issues by 30% 
-                    through improved testing and deployment processes.
-                  </p>
+                  <ul className="text-muted-foreground text-sm leading-relaxed list-disc list-inside space-y-1">
+                    <li>Shipped responsive mobile apps and websites with WCAG 2.0/ADA compliance, increasing usability scores across accessibility audits.</li>
+                    <li>Integrated REST APIs and Firebase services (Auth, Firestore, Cloud Functions), enabling real-time sync for 3 core products.</li>
+                    <li>Directed testing and deployment pipelines, reducing post-release defects by 30% and shortening release cycles.</li>
+                  </ul>
                 </div>
               </div>
             </div>
