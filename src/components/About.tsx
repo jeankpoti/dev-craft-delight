@@ -54,6 +54,15 @@ const About = () => {
             <div>
               <h3 className="text-2xl font-bold mb-4">Professional Experience</h3>
               <div className="space-y-4 mb-6">
+              <div>
+                  <p className="font-semibold text-primary">Augma AI | Frontend Developer (Remote)</p>
+                  <p className="text-sm text-muted-foreground mb-2">Apr 2025 – Present</p>
+                  <ul className="text-muted-foreground text-sm leading-relaxed list-disc list-inside space-y-1">
+                    <li>Lead the engineering team building Adllee, an AI-powered marketing platform enabling users to create, publish, and optimize campaigns across all major ad networks without prior expertise.</li>
+                    <li>Architected an internal CRM tool (React + Supabase), centralizing client data and reducing manual workflows for the sales team.</li>
+                    <li>Drive full-stack technical decisions (React, Flutter, Supabase, AI integration) and established coding standards and code review processes for the engineering team.</li>
+                  </ul>
+                </div>
                 <div>
                   <p className="font-semibold text-primary">Freelance Software Developer</p>
                   <p className="text-sm text-muted-foreground mb-2">Jun 2023 – May 2025</p>
@@ -83,7 +92,7 @@ const About = () => {
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-2 h-2 rounded-full bg-primary animate-glow" />
-                <span className="text-lg">Starting Summer 2026</span>
+                <span className="text-lg">Available Now</span>
               </div>
             </div>
           </div>
