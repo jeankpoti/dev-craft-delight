@@ -92,7 +92,7 @@ const About = () => {
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-2 h-2 rounded-full bg-primary animate-glow" />
-                <span className="text-lg">Starting Summer 2026</span>
+                <span className="text-lg">Available Now</span>
               </div>
             </div>
           </div>
