@@ -8,10 +8,12 @@ import {
   Camera,
   ListTodo,
   Brain,
+  LayoutDashboard,
 } from 'lucide-react';
 import mathgenieImage from '@/assets/mathgenie-showcase.jpg';
 import worksnapImage from '@/assets/worksnap-showcase.jpg';
 import snapanimalImage from '@/assets/snapanimal-showcase.jpg';
+import founderboardImage from '@/assets/founderboard-showcase.png';
 import placeholderImage from '/placeholder.svg';
 
 const Projects = () => {
@@ -55,6 +57,16 @@ const Projects = () => {
       link: 'https://apps.apple.com/us/app/snap-animal-ai/id6745976176',
       image: snapanimalImage,
       category: 'mobile' as const,
+    },
+    {
+      title: 'Founderboard AI',
+      description:
+        'All-in-one, AI-powered dashboard built specifically for startup founders who are drowning in tool fragmentation',
+      tech: ['React', 'Supabase', 'AI/ML'],
+      icon: LayoutDashboard,
+      link: '#',
+      image: founderboardImage,
+      category: 'websites' as const,
     },
     {
       title: 'Snap Animal Landing',
