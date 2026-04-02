@@ -195,62 +195,16 @@ const Projects = () => {
           </div>
 
           <TabsContent value="mobile">
-            {featuredProject && (
-              <Card className="overflow-hidden bg-gradient-card backdrop-blur-sm border-border shadow-card mb-12 animate-scale-in">
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div className="p-8 md:p-12 flex flex-col justify-center">
-                    <div className="inline-block mb-4">
-                      <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium border border-primary/20">
-                        Featured Project
-                      </span>
-                    </div>
-                    <h3 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
-                      {featuredProject.title}
-                    </h3>
-                    <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                      {featuredProject.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2 mb-8">
-                      {featuredProject.tech.map((tech, index) => (
-                        <span
-                          key={index}
-                          className="px-3 py-1 rounded-md bg-primary/10 text-primary text-sm font-medium"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                    <div>
-                      <a
-                        href={featuredProject.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Button variant="hero" className="group">
-                          View Demo
-                          <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                        </Button>
-                      </a>
-                    </div>
-                  </div>
-                  <div className="relative bg-secondary/50 min-h-[400px] overflow-hidden">
-                    <img
-                      src={mathgenieImage}
-                      alt="MathGenie AI app interface showing AI-powered learning features"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-              </Card>
-            )}
+            {featuredMobile && renderFeaturedCard(featuredMobile)}
             <div className="grid md:grid-cols-2 gap-6">
               {otherMobileProjects.map((project, index) => renderProjectCard(project, index))}
             </div>
           </TabsContent>
 
           <TabsContent value="websites">
+            {featuredWebsite && renderFeaturedCard(featuredWebsite)}
             <div className="grid md:grid-cols-2 gap-6">
-              {websiteProjects.map((project, index) => renderProjectCard(project, index))}
+              {otherWebsiteProjects.map((project, index) => renderProjectCard(project, index))}
             </div>
           </TabsContent>
         </Tabs>
