@@ -1,5 +1,6 @@
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import {
   ExternalLink,
   Sparkles,
@@ -12,6 +13,7 @@ import mathgenieImage from '@/assets/mathgenie-showcase.jpg';
 import worksnapImage from '@/assets/worksnap-showcase.jpg';
 import snapanimalImage from '@/assets/snapanimal-showcase.jpg';
 import placeholderImage from '/placeholder.svg';
+
 const Projects = () => {
   const projects = [
     {
@@ -22,6 +24,7 @@ const Projects = () => {
       icon: Sparkles,
       link: 'https://apps.apple.com/us/app/mathgenie-ai-solve-homework/id6746733499',
       featured: true,
+      category: 'mobile' as const,
     },
     {
       title: 'TaskMaate AI',
@@ -31,6 +34,7 @@ const Projects = () => {
       icon: Brain,
       link: 'https://taskmaateai.netlify.app',
       image: placeholderImage,
+      category: 'websites' as const,
     },
     {
       title: 'Work Snap',
@@ -40,6 +44,7 @@ const Projects = () => {
       icon: CheckCircle2,
       link: 'https://apps.apple.com/us/app/work-snap/id6739957932',
       image: worksnapImage,
+      category: 'mobile' as const,
     },
     {
       title: 'Snap Animal AI',
@@ -49,6 +54,7 @@ const Projects = () => {
       icon: Camera,
       link: 'https://apps.apple.com/us/app/snap-animal-ai/id6745976176',
       image: snapanimalImage,
+      category: 'mobile' as const,
     },
     {
       title: 'Snap Animal Landing',
@@ -58,10 +64,55 @@ const Projects = () => {
       icon: ListTodo,
       link: 'https://snapanimalai.netlify.app/',
       image: placeholderImage,
+      category: 'websites' as const,
     },
   ];
-  const featuredProject = projects.find((p) => p.featured);
-  const otherProjects = projects.filter((p) => !p.featured);
+
+  const mobileProjects = projects.filter((p) => p.category === 'mobile');
+  const websiteProjects = projects.filter((p) => p.category === 'websites');
+  const featuredProject = mobileProjects.find((p) => p.featured);
+  const otherMobileProjects = mobileProjects.filter((p) => !p.featured);
+
+  const renderProjectCard = (project: typeof projects[0], index: number) => (
+    <Card
+      key={index}
+      className="overflow-hidden bg-gradient-card backdrop-blur-sm border-border hover:shadow-glow transition-all duration-300 hover:scale-105 animate-fade-in group"
+      style={{ animationDelay: `${index * 0.1}s` }}
+    >
+      {project.image && (
+        <div className="relative h-64 bg-secondary/50 overflow-hidden">
+          <img
+            src={project.image}
+            alt={`${project.title} app interface showcase`}
+            className="w-full h-full object-cover"
+          />
+        </div>
+      )}
+      <div className="p-8">
+        <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
+        <p className="text-muted-foreground mb-6 leading-relaxed">
+          {project.description}
+        </p>
+        <div className="flex flex-wrap gap-2 mb-6">
+          {project.tech.map((tech, techIndex) => (
+            <span
+              key={techIndex}
+              className="px-3 py-1 rounded-md bg-secondary text-sm"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+        <a href={project.link} target="_blank" rel="noopener noreferrer">
+          <Button variant="outline" size="sm" className="group/btn">
+            View Project
+            <ExternalLink className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+          </Button>
+        </a>
+      </div>
+    </Card>
+  );
+
   return (
     <section id="projects" className="py-24 px-6 bg-background">
       <div className="container mx-auto max-w-6xl">
@@ -75,114 +126,77 @@ const Projects = () => {
           </p>
         </div>
 
-        {/* Featured Project */}
-        {featuredProject && (
-          <Card className="overflow-hidden bg-gradient-card backdrop-blur-sm border-border shadow-card mb-12 animate-scale-in">
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="p-8 md:p-12 flex flex-col justify-center">
-                <div className="inline-block mb-4">
-                  <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium border border-primary/20">
-                    Featured Project
-                  </span>
+        <Tabs defaultValue="mobile" className="w-full">
+          <div className="flex justify-center mb-10">
+            <TabsList className="bg-secondary/50 backdrop-blur-sm">
+              <TabsTrigger value="mobile" className="px-6">Mobile Apps</TabsTrigger>
+              <TabsTrigger value="websites" className="px-6">Websites</TabsTrigger>
+            </TabsList>
+          </div>
+
+          <TabsContent value="mobile">
+            {featuredProject && (
+              <Card className="overflow-hidden bg-gradient-card backdrop-blur-sm border-border shadow-card mb-12 animate-scale-in">
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div className="p-8 md:p-12 flex flex-col justify-center">
+                    <div className="inline-block mb-4">
+                      <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium border border-primary/20">
+                        Featured Project
+                      </span>
+                    </div>
+                    <h3 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
+                      {featuredProject.title}
+                    </h3>
+                    <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                      {featuredProject.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-8">
+                      {featuredProject.tech.map((tech, index) => (
+                        <span
+                          key={index}
+                          className="px-3 py-1 rounded-md bg-primary/10 text-primary text-sm font-medium"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                    <div>
+                      <a
+                        href={featuredProject.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Button variant="hero" className="group">
+                          View Demo
+                          <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                        </Button>
+                      </a>
+                    </div>
+                  </div>
+                  <div className="relative bg-secondary/50 min-h-[400px] overflow-hidden">
+                    <img
+                      src={mathgenieImage}
+                      alt="MathGenie AI app interface showing AI-powered learning features"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 </div>
-
-                <h3 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
-                  {featuredProject.title}
-                </h3>
-
-                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  {featuredProject.description}
-                </p>
-
-                <div className="flex flex-wrap gap-2 mb-8">
-                  {featuredProject.tech.map((tech, index) => (
-                    <span
-                      key={index}
-                      className="px-3 py-1 rounded-md bg-primary/10 text-primary text-sm font-medium"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-
-                <div>
-                  <a
-                    href={featuredProject.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Button variant="hero" className="group">
-                      View Demo
-                      <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                    </Button>
-                  </a>
-                </div>
-              </div>
-
-              <div className="relative bg-secondary/50 min-h-[400px] overflow-hidden">
-                <img
-                  src={mathgenieImage}
-                  alt="MathGenie AI app interface showing AI-powered learning features"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              </Card>
+            )}
+            <div className="grid md:grid-cols-2 gap-6">
+              {otherMobileProjects.map((project, index) => renderProjectCard(project, index))}
             </div>
-          </Card>
-        )}
+          </TabsContent>
 
-        {/* Other Projects Grid */}
-        <div className="grid md:grid-cols-2 gap-6">
-          {otherProjects.map((project, index) => (
-            <Card
-              key={index}
-              className="overflow-hidden bg-gradient-card backdrop-blur-sm border-border hover:shadow-glow transition-all duration-300 hover:scale-105 animate-fade-in group"
-              style={{
-                animationDelay: `${index * 0.1}s`,
-              }}
-            >
-              {project.image && (
-                <div className="relative h-64 bg-secondary/50 overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={`${project.title} app interface showcase`}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              )}
-
-              <div className="p-8">
-                <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
-                  {project.description}
-                </p>
-
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.tech.map((tech, techIndex) => (
-                    <span
-                      key={techIndex}
-                      className="px-3 py-1 rounded-md bg-secondary text-sm"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button variant="outline" size="sm" className="group/btn">
-                    View Project
-                    <ExternalLink className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
-                  </Button>
-                </a>
-              </div>
-            </Card>
-          ))}
-        </div>
+          <TabsContent value="websites">
+            <div className="grid md:grid-cols-2 gap-6">
+              {websiteProjects.map((project, index) => renderProjectCard(project, index))}
+            </div>
+          </TabsContent>
+        </Tabs>
       </div>
     </section>
   );
 };
+
 export default Projects;
