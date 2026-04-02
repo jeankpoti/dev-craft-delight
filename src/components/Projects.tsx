@@ -126,11 +126,11 @@ const Projects = () => {
           </p>
         </div>
 
-        <Tabs defaultValue="mobile" className="w-full">
+          <Tabs defaultValue="websites" className="w-full">
           <div className="flex justify-center mb-10">
             <TabsList className="bg-secondary/50 backdrop-blur-sm">
-              <TabsTrigger value="mobile" className="px-6">Mobile Apps</TabsTrigger>
               <TabsTrigger value="websites" className="px-6">Websites</TabsTrigger>
+              <TabsTrigger value="mobile" className="px-6">Mobile Apps</TabsTrigger>
             </TabsList>
           </div>
 
