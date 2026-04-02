@@ -8,10 +8,12 @@ import {
   Camera,
   ListTodo,
   Brain,
+  LayoutDashboard,
 } from 'lucide-react';
 import mathgenieImage from '@/assets/mathgenie-showcase.jpg';
 import worksnapImage from '@/assets/worksnap-showcase.jpg';
 import snapanimalImage from '@/assets/snapanimal-showcase.jpg';
+import founderboardImage from '@/assets/founderboard-showcase.png';
 import placeholderImage from '/placeholder.svg';
 
 const Projects = () => {
