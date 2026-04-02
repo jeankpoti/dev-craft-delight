@@ -66,6 +66,7 @@ const Projects = () => {
       icon: LayoutDashboard,
       link: '#',
       image: founderboardImage,
+      featured: true,
       category: 'websites' as const,
     },
     {
