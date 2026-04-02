@@ -59,6 +59,16 @@ const Projects = () => {
       category: 'mobile' as const,
     },
     {
+      title: 'Founderboard AI',
+      description:
+        'All-in-one, AI-powered dashboard built specifically for startup founders who are drowning in tool fragmentation',
+      tech: ['React', 'Supabase', 'AI/ML'],
+      icon: LayoutDashboard,
+      link: '#',
+      image: founderboardImage,
+      category: 'websites' as const,
+    },
+    {
       title: 'Snap Animal Landing',
       description:
         'Clean, high-performance landing page to drive user sign-ups and premium subscriptions',
