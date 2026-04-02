@@ -13,6 +13,8 @@ import {
 import mathgenieImage from '@/assets/mathgenie-showcase.jpg';
 import worksnapImage from '@/assets/worksnap-showcase.jpg';
 import snapanimalImage from '@/assets/snapanimal-showcase.jpg';
+import snapAnimalLandingImage from '@/assets/Snap-Animal-AI.png';
+import taskMateAIImage from '@/assets/TaskMate-AI.png';
 import founderboardImage from '@/assets/founderboard-showcase.png';
 import placeholderImage from '/placeholder.svg';
 
@@ -25,6 +27,7 @@ const Projects = () => {
       tech: ['Flutter', 'Gemini AI', 'Firebase'],
       icon: Sparkles,
       link: 'https://apps.apple.com/us/app/mathgenie-ai-solve-homework/id6746733499',
+      image: mathgenieImage,
       featured: true,
       category: 'mobile' as const,
     },
@@ -32,10 +35,10 @@ const Projects = () => {
       title: 'TaskMaate AI',
       description:
         'AI productivity SaaS for task management, smart scheduling, and workflow optimization',
-      tech: ['React', 'Next.js', 'AI/ML'],
+      tech: ['React', 'Tailwind CSS', 'Gemini AI', 'Firebase'],
       icon: Brain,
       link: 'https://taskmaateai.netlify.app',
-      image: placeholderImage,
+      image: taskMateAIImage,
       category: 'websites' as const,
     },
     {
@@ -59,12 +62,19 @@ const Projects = () => {
       category: 'mobile' as const,
     },
     {
-      title: 'Founderboard AI',
+      title: 'FounderBoard AI',
       description:
-        'All-in-one, AI-powered dashboard built specifically for startup founders who are drowning in tool fragmentation',
-      tech: ['React', 'Supabase', 'AI/ML'],
+        'AI-powered dashboard for startup founders built with a modern web stack focused on productivity and decision support',
+      tech: [
+        'React',
+        'Next.js',
+        'Firebase',
+        'Zustand',
+        'Tailwind CSS',
+        'OpenAI API',
+      ],
       icon: LayoutDashboard,
-      link: '#',
+      link: 'https://founderboard-ai.vercel.app/',
       image: founderboardImage,
       featured: true,
       category: 'websites' as const,
@@ -73,10 +83,10 @@ const Projects = () => {
       title: 'Snap Animal Landing',
       description:
         'Clean, high-performance landing page to drive user sign-ups and premium subscriptions',
-      tech: ['React', 'Next.js', 'Tailwind CSS'],
+      tech: ['React', 'Tailwind CSS'],
       icon: ListTodo,
       link: 'https://snapanimalai.netlify.app/',
-      image: placeholderImage,
+      image: snapAnimalLandingImage,
       category: 'websites' as const,
     },
   ];
